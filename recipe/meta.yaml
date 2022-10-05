@@ -1,5 +1,5 @@
 {% set name = "mne-connectivity" %}
-{% set version = "0.3" %}
+{% set version = "0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eb3947b8f7b608f5feee6ea4476fc14cfe6c379e6d2baca8043576cca57cc6b9
+  sha256: f81e822220421c92d2b0e51c19cb5b11965dfe2c25a64de9187488d92fa6a417
 
 build:
   noarch: python

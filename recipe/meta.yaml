@@ -1,13 +1,13 @@
 {% set name = "mne-connectivity" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a93ed6b9d781714b07d5757578343bd75a1d3832228b5b15518588d13e19aa7f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 89f9e11d1843395dd67458f027aedee1a70fdfce97241a7d3f2710164d537864
 
 build:
   noarch: python

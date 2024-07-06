@@ -11,32 +11,25 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.9
     - pip
 
   run:
-    - python >=3.7
-    - mne-base >=0.24
-    - numpy >=1.14
+    - python >=3.9
+    - mne-base >=1.6
+    - numpy >=1.21
     - scipy >=1.5.0
-    - pandas >=0.23.4
-    - xarray >=0.18
+    - pandas >=1.3.2
+    - xarray >=2023.11.0
     - joblib >=1.0.0
-    - netCDF4
+    - netCDF4 >=1.6.5
     - h5netcdf
     - scikit-learn >=0.24.2
-    - pyvista >=0.30
-    - pyvistaqt >=0.4
-    - sip
-    - pyqt
-    - pyqt5-sip
-    - matplotlib-base
-    - pooch
     - tqdm
 
 test:

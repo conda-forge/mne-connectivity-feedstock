@@ -12,26 +12,28 @@ source:
 build:
   noarch: python
   number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - python {{ python_min }}
+    - setuptools >=64
+    - setuptools-scm >=8
+    - wheel
     - pip
-    - setuptools
 
   run:
     - python >={{ python_min }}
     - mne-base >=1.6
+    - netcdf4 >=1.6.5
     - numpy >=1.21
-    - scipy >=1.5.0
     - pandas >=1.3.2
+    - scikit-learn >=1.2
+    - scipy >=1.4.0
+    - tqdm
     - xarray >=2023.11.0
     - joblib >=1.0.0
-    - netCDF4 >=1.6.5
     - h5netcdf
-    - scikit-learn >=0.24.2
-    - tqdm
 
 test:
   imports:
@@ -46,10 +48,10 @@ test:
 
 about:
   home: https://mne.tools/mne-connectivity
+  summary: 'mne-connectivity: A module for connectivity data analysis with MNE.'
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: Connectivity algorithms that leverage the MNE-Python API.
   description: |
     MNE-Connectivity is an open-source Python package for connectivity and
     related measures of MEG, EEG, or iEEG data built on top of the MNE-Python

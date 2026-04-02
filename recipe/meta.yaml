@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -42,6 +42,7 @@ test:
     - python {{ python_min }}
   commands:
     - pip check
+    - python -c "import mne_connectivity; assert mne_connectivity.__version__ == '{{ version }}', mne_connectivity.__version__"
 
 about:
   home: https://mne.tools/mne-connectivity

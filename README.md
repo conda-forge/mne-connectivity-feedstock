@@ -7,7 +7,7 @@ Home: https://mne.tools/mne-connectivity
 
 Package license: BSD-3-Clause
 
-Summary: Connectivity algorithms that leverage the MNE-Python API.
+Summary: mne-connectivity: A module for connectivity data analysis with MNE.
 
 Development: https://github.com/mne-tools/mne-connectivity
 
